@@ -4,9 +4,13 @@
 PUT /food
 {}
 
+// 删除索引
+DELETE /food
+
 /**创建friut type */
 POST /food/friut
 {}
+
 
 /**创建一个文档 */
 POST /food/friut/
