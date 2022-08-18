@@ -1,0 +1,6 @@
+
+.vscode
+.idea
+
+/image/
+/node_modules/
