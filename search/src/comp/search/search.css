@@ -1,0 +1,19 @@
+#search {}
+
+#search input {
+  height: 50px;
+  padding: 0 8px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  width: 500px;
+  font-size: 18px;
+}
+
+.data-list{
+
+}
+.data-list li{
+  list-style: none;
+  color:aqua
+}

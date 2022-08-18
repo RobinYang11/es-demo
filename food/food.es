@@ -8,12 +8,12 @@ PUT /food
 DELETE /food
 
 /**创建friut type */
-POST /food/friut
+POST /food/fruit
 {}
 
 
 /**创建一个文档 */
-POST /food/friut/
+POST /food/fruit/
 {
   "name":"water",
   "price":1324.4,
@@ -53,7 +53,11 @@ GET /food/_search
 
 GET /food/_search
 {
-  
+ "query" :{
+   "match":{
+    "name":"伦夜"
+   }
+ }
 }
 
 

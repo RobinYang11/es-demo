@@ -1,5 +1,5 @@
 {
-  "took": 0,
+  "took": 21,
   "timed_out": false,
   "_shards": {
     "total": 1,
@@ -9,10 +9,131 @@
   },
   "hits": {
     "total": {
-      "value": 0,
+      "value": 71,
       "relation": "eq"
     },
-    "max_score": null,
-    "hits": []
+    "max_score": 7.4466724,
+    "hits": [
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "A4mKsYIBcMS6vnnv9guB",
+        "_score": 7.4466724,
+        "_source": {
+          "name": "伦晚",
+          "address": "宜昌市",
+          "desc": "伦晚",
+          "img": "https://image.guo68.com/2020-05-03/97009c03ef0a2c89cbd2a687eaa97eba.jpg.210_164_thumb.jpg"
+        }
+      },
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "Vog1sYIBcMS6vnnvZPzs",
+        "_score": 6.978202,
+        "_source": {
+          "name": "克伦生",
+          "address": "运城市",
+          "desc": "克伦生",
+          "img": "https://image.guo68.com/2021-09-20/196a8acf7e385e15a3172a83e465968d.jpg.210_164_thumb.jpg"
+        }
+      },
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "IomIsYIBcMS6vnnvfgWZ",
+        "_score": 6.978202,
+        "_source": {
+          "name": "克伦生",
+          "address": "运城市",
+          "desc": "克伦生",
+          "img": "https://image.guo68.com/2020-10-05/b406eb93680e5b7386dedf0cf1e3685d.jpg.210_164_thumb.jpg"
+        }
+      },
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "6omIsYIBcMS6vnnv0AWI",
+        "_score": 6.978202,
+        "_source": {
+          "name": "克伦生",
+          "address": "运城市",
+          "desc": "克伦生",
+          "img": "https://image.guo68.com/2020-09-17/900763c120f1ecd73f858db9878bb10e.jpg.210_164_thumb.jpg"
+        }
+      },
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "jImSsYIBcMS6vnnvth2R",
+        "_score": 6.978202,
+        "_source": {
+          "name": "克伦生",
+          "address": "凉山彝族自治州",
+          "desc": "克伦生",
+          "img": "https://image.guo68.com/2019-05-30/a61d58e15c38d689d50de9140b891a67.jpg.210_164_thumb.jpg"
+        }
+      },
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "YomGsYIBcMS6vnnvlQBe",
+        "_score": 6.565186,
+        "_source": {
+          "name": "秭归伦晚",
+          "address": "宜昌市",
+          "desc": "秭归伦晚",
+          "img": "https://image.guo68.com/2021-04-24/136615b0762893a7be4b763afecf0e9f.jpg.210_164_thumb.jpg"
+        }
+      },
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "qImKsYIBcMS6vnnvzwrV",
+        "_score": 6.565186,
+        "_source": {
+          "name": "红橙伦晚",
+          "address": "宜昌市",
+          "desc": "红橙伦晚",
+          "img": "https://image.guo68.com/2020-05-14/f9726da9eed01b7ddd282cfde606e334.jpg.210_164_thumb.jpg"
+        }
+      },
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "cImLsYIBcMS6vnnvIgsO",
+        "_score": 6.565186,
+        "_source": {
+          "name": "伦晚、脐橙",
+          "address": "漳州市",
+          "desc": "伦晚、脐橙",
+          "img": "https://image.guo68.com/2020-03-30/8f8f512ebd76ca75182bb07800401974.jpg.210_164_thumb.jpg"
+        }
+      },
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "o4mLsYIBcMS6vnnvNwsf",
+        "_score": 6.565186,
+        "_source": {
+          "name": "红橙，伦晚",
+          "address": "宜昌市",
+          "desc": "红橙，伦晚",
+          "img": "https://image.guo68.com/2020-04-24/07bb6527b2739bc31eaa892a362241df.jpg.210_164_thumb.jpg"
+        }
+      },
+      {
+        "_index": "food",
+        "_type": "fruit",
+        "_id": "84gysYIBcMS6vnnvwvWh",
+        "_score": 6.198328,
+        "_source": {
+          "name": "克伦生葡萄",
+          "address": "博尔塔拉蒙古自治州",
+          "desc": "克伦生葡萄",
+          "img": "https://image.guo68.com/2022-08-04/97a6b6c2d34c768bbaef25045c421b3a.jpg.210_164_thumb.jpg"
+        }
+      }
+    ]
   }
 }
