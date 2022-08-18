@@ -1,5 +1,5 @@
 {
-  "took": 1,
+  "took": 0,
   "timed_out": false,
   "_shards": {
     "total": 1,
@@ -9,24 +9,10 @@
   },
   "hits": {
     "total": {
-      "value": 1,
+      "value": 0,
       "relation": "eq"
     },
-    "max_score": 0.2876821,
-    "hits": [
-      {
-        "_index": "food",
-        "_type": "friut",
-        "_id": "X3XJqoIB-5xm3vo60NoL",
-        "_score": 0.2876821,
-        "_source": {
-          "name": "apple",
-          "price": 1324.4,
-          "cname": "苹果",
-          "rest": 2343,
-          "brand": "陕西红富士"
-        }
-      }
-    ]
+    "max_score": null,
+    "hits": []
   }
 }

@@ -10,7 +10,6 @@ fetch('http://localhost:9200/food/_search',{
   console.log(JSON.stringify(res))
 })
 
-
 function createData(){
   const name =""        
 }

@@ -2,5 +2,7 @@
 .vscode
 .idea
 
+/result.json
+
 /image/
 /node_modules/
