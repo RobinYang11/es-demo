@@ -7,12 +7,9 @@ import urllib.request
 import uuid
 import time
 
-
 seasons=["冬天" ,"夏天" ,"春天","秋天"]
 tags=["稀有特产","西域美食","塞上江南","鱼米之乡","舌尖上的中国","沙漠水果"]
-
 host = "https://www.guo68.com"
-
 
 def grabPageData(page):
     p = str(page)
