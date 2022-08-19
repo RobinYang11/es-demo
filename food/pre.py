@@ -1,11 +1,15 @@
 
 import json
-from random import Random
+import random
 import requests
 from bs4 import BeautifulSoup
 import urllib.request
 import uuid
 import time
+
+
+seasons=["冬天" ,"夏天" ,"春天","秋天"]
+tags=["稀有特产","西域美食","塞上江南","鱼米之乡","舌尖上的中国","沙漠水果"]
 
 host = "https://www.guo68.com"
 
@@ -35,13 +39,22 @@ def grabPageData(page):
         if not onNet:
             img = host+img
 
+        exp_day= random.sample(range(1,100))
+
+        season=seasons[random.sample(range(0,3))]
+        tag = tags[random.sample(range(0,len(tags)))]
+
         data = {
+            "tag":tag,
+            "season":season,
             "name": name,
             "address": address,
             "desc": desc,
             "img": img,
-            "price": price
+            "price": price,
+            "exp_day":exp_day
         }
+
         result = requests.post('http://localhost:9200/food/fruit',
                                json=data, headers={"Content-Type": "application/json"})
         # onNet = img.__contains__("http")

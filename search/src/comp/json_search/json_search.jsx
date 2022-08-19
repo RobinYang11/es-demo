@@ -8,9 +8,28 @@ import axios from 'axios';
 export default function JsonSearch() {
 
   const search = `{
-    "query":{
-      "match":{
-        "name":"苹果"
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "match": {
+              "name": "香蕉"
+            }
+          },
+          {
+            "match": {
+              "desc": "苹果"
+            }
+          }
+        ]
+      }
+    },
+    "highlight": {
+      "fields": {
+        "name": {
+          "force_source": true
+        },
+        "desc": {}
       }
     },
     "from": 0,
