@@ -7,7 +7,6 @@ import urllib.request
 import uuid
 import time
 
-
 host = "https://www.guo68.com"
 
 
@@ -23,7 +22,7 @@ def grabPageData(page):
         address_tag = div.find("p", "address")
         address = address_tag.get_text()
 
-        price_tag = div.find("p", "address")
+        price_tag = div.find("span", "price")
         price = price_tag.get_text()
 
         desc_tag = div.find("p", "describe")
@@ -31,19 +30,24 @@ def grabPageData(page):
 
         img_tag = div.find("img")
         img = img_tag.get("src")
+
+        onNet = img.__contains__("http")
+        if not onNet:
+            img = host+img
+
         data = {
             "name": name,
             "address": address,
             "desc": desc,
-            "img": img
+            "img": img,
+            "price": price
         }
         result = requests.post('http://localhost:9200/food/fruit',
                                json=data, headers={"Content-Type": "application/json"})
-        print(result.status_code)
         # onNet = img.__contains__("http")
         # if not onNet:
         #   print(img)
-        #   local_img =host+im
+        #   local_img =host+img
         #   r = uuid.uuid4()
         #   fname = "./image" + str(r) + ".jpg"
         #   urllib.request.urlretrieve(local_img,filename=fname)
@@ -54,9 +58,29 @@ def grabPageData(page):
         #   urllib.request.urlretrieve(img,filename=fname)
 
 
-def start():
-    for i in range(50, 1000):
-        grabPageData(i)
+def create_food_index():
 
+    requests.delete('http://localhost:9200/food')
+
+    res = requests.put("http://localhost:9200/food")
+    if (res.status_code == 200):
+        print("索引创建成功")
+
+
+def create_food_type():
+    res = requests.put("http://localhost:9200/food/fruit")
+    if (res.status_code == 200):
+        print("type创建成功")
+
+
+def start():
+    create_food_index()
+    create_food_type()
+
+    for i in range(1, 100):
+        print("Downloading page:" + str(i))
+        grabPageData(i)
+        print("Finished page:" + str(i))
+    print("Oh! Finished download!")
 
 start()
