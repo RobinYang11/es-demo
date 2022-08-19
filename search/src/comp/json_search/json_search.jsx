@@ -20,6 +20,10 @@ export default function JsonSearch() {
             "match": {
               "desc": "苹果"
             }
+          },{
+            "match":{
+              "exp_day": 30
+            }
           }
         ]
       }
@@ -38,7 +42,7 @@ export default function JsonSearch() {
 }`
 
 
-  const [result,setResult] =useState('')
+  const [result, setResult] = useState('')
   const [data, setData] = useState([])
   const [total, setTotal] = useState(0)
 
@@ -88,7 +92,7 @@ export default function JsonSearch() {
         height="90vh"
         options={{
           fontSize: '14px',
-          automaticLayout:true, 
+          automaticLayout: true,
           fontWeight: "bold",
           autoIndent: true,
           renderLineHighlightOnlyWhenFocus: false,

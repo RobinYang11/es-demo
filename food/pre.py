@@ -7,10 +7,12 @@ import urllib.request
 import uuid
 import time
 
-seasons=["冬天" ,"夏天" ,"春天","秋天"]
-tags=["稀有特产","西域美食","塞上江南","鱼米之乡","舌尖上的中国","沙漠水果"]
+seasons = ["冬天", "夏天", "春天", "秋天"]
+tags = ["稀有特产", "西域美食", "塞上江南", "鱼米之乡", "舌尖上的中国", "沙漠水果"]
 host = "https://www.guo68.com"
 
+
+# 爬取每页的数据
 def grabPageData(page):
     p = str(page)
     res = requests.get("https://www.guo68.com/sell?page="+p, {})
@@ -36,20 +38,20 @@ def grabPageData(page):
         if not onNet:
             img = host+img
 
-        exp_day= random.sample(range(1,100))
+        exp_day = random.sample(range(1, 100), 1)[0]
 
-        season=seasons[random.sample(range(0,3))]
-        tag = tags[random.sample(range(0,len(tags)))]
+        season = seasons[random.sample(range(0, 3), 1)[0]]
+        tag = tags[random.sample(range(0, len(tags)), 1)[0]]
 
         data = {
-            "tag":tag,
-            "season":season,
+            "tag": tag,
+            "season": season,
             "name": name,
             "address": address,
             "desc": desc,
             "img": img,
             "price": price,
-            "exp_day":exp_day
+            "exp_day": exp_day
         }
 
         result = requests.post('http://localhost:9200/food/fruit',
@@ -89,8 +91,10 @@ def start():
 
     for i in range(1, 100):
         print("Downloading page:" + str(i))
+        # 开始爬取数据
         grabPageData(i)
         print("Finished page:" + str(i))
     print("Oh! Finished download!")
+
 
 start()
