@@ -1,4 +1,5 @@
 import './App.css';
+import JsonSearch from './comp/json_search/json_search';
 import Search from './comp/search/search';
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
         {/* ROBIN ENGINE */}
       </header>
       <main>
-        <Search />
+        {/* <Search /> */}
+        <JsonSearch />
       </main>
     </div>
   );

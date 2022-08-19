@@ -1,0 +1,20 @@
+
+
+
+#json-search{
+  display:flex; 
+  color:aquamarine
+}
+
+#json-search .left{
+  width: 800px;
+}
+
+#json-search .right{
+  flex:1;
+}
+
+.right li{
+  list-style: none;
+}
+
